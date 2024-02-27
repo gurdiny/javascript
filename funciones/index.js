@@ -59,41 +59,75 @@ function imprimir3({name, lastName, age, gender, height}) {
 // scope()
 
 
-const a = function miPirmerFuncion(){
-  let a = 5
-  console.log(a)
-}
+// const a = function miPirmerFuncion(){
+//   let a = 5
+//   console.log(a)
+// }
 
-a()
+// a()
 
-function suma(a, b){
-  const operacion = a + b
-  console.log(operacion)
-}
-suma(52, 5)
+// function suma(a, b){
+//   const operacion = a + b
+//   console.log(operacion)
+// }
+// suma(52, 5)
 
-let num = 0
+// let num = 0
 
-function couter() {
-  if(num >= 10){
-    return
-  }
+// function couter() {
+//   if(num >= 10){
+//     return
+//   }
 
-  num = num + 1
-  console.log(num)
+//   num = num + 1
+//   console.log(num)
 
-  // Eejcutar dentro de la funcion (Recursividad)
-  couter()
-}
+//   // Eejcutar dentro de la funcion (Recursividad)
+//   couter()
+// }
 
-// Eejcutar fuera de la funcion
-couter()
+// // Eejcutar fuera de la funcion
+// couter()
+
+// const saludame = function saludo(name){
+//   if(!name) return "el campo es necesario!!"
+//   const saludoCompleto = `Hola ${name}!, esto es una prueba`
+
+//   return saludoCompleto
+// }
+
+// console.log(saludame ("Gerardo"))
 
 const saludame = function saludo(name){
-  if(!name) return "el campo es necesario!!"
-  const saludoCompleto = `Hola ${name}!, esto es una prueba`
+  if(!name) return "Hola amigo, ¿como estas?"
 
+  const saludoCompleto = `hola ${name}, ¿como estas?`
   return saludoCompleto
 }
 
 console.log(saludame ("Gerardo"))
+
+let numero = 0
+
+const nada = function suma(a, b){
+  if(!a, !b) return "Ingresa digitos"
+
+  const numero = a + b
+  return numero
+}
+
+console.log(nada(10,20))
+
+const residuo = function parInpar(numero){
+  let esPar = null
+
+  if(numero % 2==0){
+    esPar = `Tu ${numero} es par`
+  }else{
+    esPar = `Tu ${numero} es impar`
+  }
+
+  return esPar
+}
+
+console.log(residuo(5500553))
