@@ -1,31 +1,28 @@
-//parametros dentro de los parentesis 
+//parametros dentro de los parentesis
 // El function es como si fuera una variable
 
 // funcion en orden
-function imprimir(name, lastname) /*Parametros*/  {
+function imprimir(name, lastname) /*Parametros*/ {
   /*cuerpo de la funcion*/
   console.log(name, lastname)
 }
 // imprimir("Gerardo", "Urias")
 
 // funcion sin orden
-function imprimir2({name, lastName}) {
-  
+function imprimir2({ name, lastName }) {
   console.log(name, lastName)
 }
 // imprimir2({lastName: "Urias", name: "Gerardo"})
 
-
 // funcion sin orden
-function imprimir3({name, lastName, age, gender, height}) {
-  
-  console.log(name, lastName, age, gender, height )
+function imprimir3({ name, lastName, age, gender, height }) {
+  console.log(name, lastName, age, gender, height)
 }
 // imprimir3({
-//   name: "Gerardo", 
-//   lastName: "Urias", 
-//   age: 26, 
-//   gender: "male", 
+//   name: "Gerardo",
+//   lastName: "Urias",
+//   age: 26,
+//   gender: "male",
 //   height: "1.80m",
 //   weight: "82 kg",
 // })
@@ -38,10 +35,10 @@ function imprimir3({name, lastName, age, gender, height}) {
 //   console.log(age, elNombreQueQuieras)
 // }
 // imprimir4({
-//   name: "Gerardo", 
-//   lastName: "Urias", 
-//   age: 26, 
-//   gender: "male", 
+//   name: "Gerardo",
+//   lastName: "Urias",
+//   age: 26,
+//   gender: "male",
 //   height: "1.80m",
 //   weight: "82 kg",
 
@@ -57,7 +54,6 @@ function imprimir3({name, lastName, age, gender, height}) {
 //   console.log(b)
 // }
 // scope()
-
 
 // const a = function miPirmerFuncion(){
 //   let a = 5
@@ -98,32 +94,33 @@ function imprimir3({name, lastName, age, gender, height}) {
 
 // console.log(saludame ("Gerardo"))
 
-const saludame = function saludo(name){
-  if(!name) return "Hola amigo, ¿como estas?"
+const saludame = function saludo(name) {
+  if (!name) return 'Hola amigo, ¿como estas?'
 
   const saludoCompleto = `hola ${name}, ¿como estas?`
   return saludoCompleto
 }
 
-console.log(saludame ("Gerardo"))
-
+console.log(saludame('Gerardo'))
 let numero = 0
 
-const nada = function suma(a, b){
-  if(!a, !b) return "Ingresa digitos"
-
-  const numero = a + b
-  return numero
+function suma() {
+  if(numero >= 10) {
+    return
+  }
+  numero = numero + 1
+  console.log(numero)
+  suma()
 }
 
-console.log(nada(10,20))
+suma()
 
-const residuo = function parInpar(numero){
+const residuo = function parInpar(numero) {
   let esPar = null
 
-  if(numero % 2==0){
+  if (numero % 2 === 0) {
     esPar = `Tu ${numero} es par`
-  }else{
+  } else {
     esPar = `Tu ${numero} es impar`
   }
 
@@ -131,3 +128,32 @@ const residuo = function parInpar(numero){
 }
 
 console.log(residuo(5500553))
+
+// Del profe
+
+let num = 0
+
+function alterar() {
+  count = num + 1
+}
+alterar()
+alterar()
+console.log(count)
+
+
+function evenOdd(number) {
+  let message 
+  if(typeof number !== "number"){
+    message= ` el ${number} No es un numero`
+    return message
+  }
+  if (number % 2 === 0){
+    message= `el numero ${number} es par`
+    return message
+  } 
+  message= `el numero ${number} es impar`
+  return message
+
+}
+
+console.log(evenOdd("hola"))
