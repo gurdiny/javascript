@@ -105,7 +105,7 @@ console.log(saludame('Gerardo'))
 let numero = 0
 
 function suma() {
-  if(numero >= 10) {
+  if (numero >= 10) {
     return
   }
   numero = numero + 1
@@ -140,20 +140,18 @@ alterar()
 alterar()
 console.log(count)
 
-
 function evenOdd(number) {
-  let message 
-  if(typeof number !== "number"){
-    message= ` el ${number} No es un numero`
+  let message
+  if (typeof number !== 'number') {
+    message = ` el ${number} No es un numero`
     return message
   }
-  if (number % 2 === 0){
-    message= `el numero ${number} es par`
+  if (number % 2 === 0) {
+    message = `el numero ${number} es par`
     return message
-  } 
-  message= `el numero ${number} es impar`
+  }
+  message = `el numero ${number} es impar`
   return message
-
 }
 
-console.log(evenOdd("hola"))
+console.log(evenOdd('hola'))
