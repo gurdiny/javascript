@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+   
+
+</head>
+<body>
+
+    <!-- Formularios 
+        Enctype: Codficar el formulario para el envio de archivi}os: Si se hará envio de media tiene que ser "multipart/form-data"
+        Action: A donde va a llegar la informacion de nuestro fromulario. Es un tipo href ad un a
+        method: GET Y POST. Antiguos. Recientes Put, Patch, Delete. 
+        
+        -Son meotdos usados mediante HTML
+        GET: Obtener información del servidor o API(Un formulario de filtros)
+        POST: Publicar informacion del servidor o API
+
+        -Son meotdos usados mediante JS
+        PUT: Actualiza toda la informacion.
+        PATCH: Actualiza cierto ciertos datos.
+        DELETE: Borra datos que ya existen.
+
+
+    -->
+    <form action="" method="GET" enctype="multipart/form-data">
+        <!-- El formualrio solo va a mandar campos con Nombre o que esten habilidados (disabled)
+        placerholder: es ayuda para el usuario de que escribir
+        disabled: desahabilita el campo para que el usuari o no pueda interactuar con él y no se envia el servidor
+        readonly: solo lee el formulario
+        required: Son validaciones Obligatorias
+        -->
+        <label for="">Comentarios</label>
+        <textarea name="comments" placeholder="Aqui va tu mensaje" required readonly></textarea>
+
+        <!-- El atributo:
+        selected: Seleccionar por fefecto
+        -->
+        <!-- name: utilizar siempre en snakeCase -->
+        <select name="fruits" required>
+            <option value="" disabled selected></option>
+            <option value="54">Manzana</option>
+            <option value="55">Naranja</option>
+            <option value="56">Piña</option>
+        </select>
+
+        <input name="phone" type="tel">
+        <input type="email" name="Correo">
+        <input type="password" name="Contraseña">
+
+        <input type="file" name="cv">
+
+        <!--CheckBox
+        Todos los check box  con el mismo nombre se guardan como un array en back
+        -->
+        <input type="checkbox" name="cosas" value="Pelota">
+
+        <input type="">
+
+
+    </form>
+
+
+
+    <!-- <form id="miFormulario">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+        
+        <input type="submit" value="Enviar">
+    </form> -->
+    
+</body>
+</html>
